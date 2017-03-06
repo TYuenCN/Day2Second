@@ -1,0 +1,983 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2922A3393911CE3F9D5FE65A /* Pods_Day2Second.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A27E4F8D9B7ED569AB89BDB /* Pods_Day2Second.framework */; };
+		A60A856463ADABF21AAC9EFE /* Pods_Day2SecondTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EABF18845549850A9C0CF76 /* Pods_Day2SecondTests.framework */; };
+		BCD651E982F7177B30A21FF5 /* Pods_Day2SecondUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF42DCB291D6007F1AD99CE /* Pods_Day2SecondUITests.framework */; };
+		EC9306181E60538100DF65CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306171E60538100DF65CF /* main.m */; };
+		EC93061B1E60538100DF65CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93061A1E60538100DF65CF /* AppDelegate.m */; };
+		EC9306231E60538100DF65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9306221E60538100DF65CF /* Assets.xcassets */; };
+		EC9306311E60538200DF65CF /* Day2SecondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306301E60538200DF65CF /* Day2SecondTests.m */; };
+		EC93063C1E60538200DF65CF /* Day2SecondUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93063B1E60538200DF65CF /* Day2SecondUITests.m */; };
+		EC9306561E605B9F00DF65CF /* YDSDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306551E605B9F00DF65CF /* YDSDAO.m */; };
+		EC9306591E6072EF00DF65CF /* YDSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306581E6072EF00DF65CF /* YDSBaseModel.m */; };
+		EC93065C1E60739800DF65CF /* YDSImageGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93065B1E60739800DF65CF /* YDSImageGroupModel.m */; };
+		EC93065F1E6073C100DF65CF /* YDSImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93065E1E6073C100DF65CF /* YDSImageModel.m */; };
+		EC9306621E6078E200DF65CF /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306611E6078E200DF65CF /* NSObject+Swizzle.m */; };
+		EC9306651E6079F600DF65CF /* YDSFacadeCrashReportUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306641E6079F600DF65CF /* YDSFacadeCrashReportUtil.m */; };
+		EC9306731E61441B00DF65CF /* YDSConcreteMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306721E61441B00DF65CF /* YDSConcreteMediator.m */; };
+		EC9306751E61480E00DF65CF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9306741E61480E00DF65CF /* Launch Screen.storyboard */; };
+		EC9306781E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306771E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.m */; };
+		EC93067D1E619A2A00DF65CF /* YDSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93067C1E619A2A00DF65CF /* YDSBaseViewController.m */; };
+		EC9306801E619A4800DF65CF /* YDSAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93067F1E619A4800DF65CF /* YDSAlbumListViewController.m */; };
+		EC9306831E619A8200DF65CF /* YDSConcreteMediator+AlbumList.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306821E619A8100DF65CF /* YDSConcreteMediator+AlbumList.m */; };
+		EC9306861E61BD2800DF65CF /* YDSAlbumListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306851E61BD2800DF65CF /* YDSAlbumListViewModel.m */; };
+		EC93068A1E61C58E00DF65CF /* YDSCapturerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306891E61C58E00DF65CF /* YDSCapturerViewController.m */; };
+		EC93068E1E61C9FD00DF65CF /* YDSMediaService.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93068D1E61C9FD00DF65CF /* YDSMediaService.m */; };
+		EC9306931E61D8A000DF65CF /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306901E61D8A000DF65CF /* UIImage+Thumbnail.m */; };
+		EC9306941E61D8A000DF65CF /* UImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306921E61D8A000DF65CF /* UImage+FixOrientation.m */; };
+		EC9306971E61EF5D00DF65CF /* YDSCapturerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306961E61EF5D00DF65CF /* YDSCapturerViewModel.m */; };
+		EC93069A1E62BB1600DF65CF /* YDSAlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306991E62BB1600DF65CF /* YDSAlbumDetailViewController.m */; };
+		EC93069D1E62BB4000DF65CF /* YDSAlbumDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93069C1E62BB4000DF65CF /* YDSAlbumDetailViewModel.m */; };
+		EC9306A51E6C479400DF65CF /* YDSConvertVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306A41E6C479400DF65CF /* YDSConvertVideoViewController.m */; };
+		EC9306A81E6C47D000DF65CF /* YDSConvertVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306A71E6C47D000DF65CF /* YDSConvertVideoViewModel.m */; };
+		EC9306AF1E6C497300DF65CF /* YDSImageConvert2VideoService.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306AE1E6C497300DF65CF /* YDSImageConvert2VideoService.m */; };
+		EC9306B11E6C49F300DF65CF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9306B01E6C49F300DF65CF /* AVFoundation.framework */; };
+		EC9306B31E6C49FE00DF65CF /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9306B21E6C49FE00DF65CF /* VideoToolbox.framework */; };
+		EC9306B61E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9306B51E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC93062D1E60538200DF65CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC93060B1E60538100DF65CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC9306121E60538100DF65CF;
+			remoteInfo = Day2Second;
+		};
+		EC9306381E60538200DF65CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC93060B1E60538100DF65CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC9306121E60538100DF65CF;
+			remoteInfo = Day2Second;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EABF18845549850A9C0CF76 /* Pods_Day2SecondTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Day2SecondTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		277E1EE991DF2C03ECB9F573 /* Pods-Day2SecondTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day2SecondTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Day2SecondTests/Pods-Day2SecondTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A27E4F8D9B7ED569AB89BDB /* Pods_Day2Second.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Day2Second.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF42DCB291D6007F1AD99CE /* Pods_Day2SecondUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Day2SecondUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FEF11C487162BD189BBC7BC /* Pods-Day2SecondUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day2SecondUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Day2SecondUITests/Pods-Day2SecondUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDC7ABE4A3D220284C7812E7 /* Pods-Day2SecondUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day2SecondUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Day2SecondUITests/Pods-Day2SecondUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E31F54088906F31BDF013AFA /* Pods-Day2SecondTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day2SecondTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Day2SecondTests/Pods-Day2SecondTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC9306131E60538100DF65CF /* Day2Second.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day2Second.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9306171E60538100DF65CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC9306191E60538100DF65CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC93061A1E60538100DF65CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC9306221E60538100DF65CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC9306271E60538100DF65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC93062C1E60538200DF65CF /* Day2SecondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day2SecondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9306301E60538200DF65CF /* Day2SecondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day2SecondTests.m; sourceTree = "<group>"; };
+		EC9306321E60538200DF65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC9306371E60538200DF65CF /* Day2SecondUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day2SecondUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC93063B1E60538200DF65CF /* Day2SecondUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day2SecondUITests.m; sourceTree = "<group>"; };
+		EC93063D1E60538200DF65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC9306541E605B9F00DF65CF /* YDSDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSDAO.h; sourceTree = "<group>"; };
+		EC9306551E605B9F00DF65CF /* YDSDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSDAO.m; sourceTree = "<group>"; };
+		EC9306571E6072EF00DF65CF /* YDSBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSBaseModel.h; sourceTree = "<group>"; };
+		EC9306581E6072EF00DF65CF /* YDSBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSBaseModel.m; sourceTree = "<group>"; };
+		EC93065A1E60739800DF65CF /* YDSImageGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSImageGroupModel.h; sourceTree = "<group>"; };
+		EC93065B1E60739800DF65CF /* YDSImageGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSImageGroupModel.m; sourceTree = "<group>"; };
+		EC93065D1E6073C100DF65CF /* YDSImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSImageModel.h; sourceTree = "<group>"; };
+		EC93065E1E6073C100DF65CF /* YDSImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSImageModel.m; sourceTree = "<group>"; };
+		EC9306601E6078E200DF65CF /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		EC9306611E6078E200DF65CF /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		EC9306631E6079F600DF65CF /* YDSFacadeCrashReportUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSFacadeCrashReportUtil.h; sourceTree = "<group>"; };
+		EC9306641E6079F600DF65CF /* YDSFacadeCrashReportUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSFacadeCrashReportUtil.m; sourceTree = "<group>"; };
+		EC9306661E607CF000DF65CF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		EC9306681E607CFC00DF65CF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EC93066A1E607D1A00DF65CF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EC93066C1E607D2200DF65CF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		EC93066E1E607D2700DF65CF /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		EC9306701E6143E300DF65CF /* YDSMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDSMediator.h; sourceTree = "<group>"; };
+		EC9306711E61441B00DF65CF /* YDSConcreteMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSConcreteMediator.h; sourceTree = "<group>"; };
+		EC9306721E61441B00DF65CF /* YDSConcreteMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSConcreteMediator.m; sourceTree = "<group>"; };
+		EC9306741E61480E00DF65CF /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		EC9306761E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MediatorWeakRefRegister.h"; sourceTree = "<group>"; };
+		EC9306771E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MediatorWeakRefRegister.m"; sourceTree = "<group>"; };
+		EC93067B1E619A2A00DF65CF /* YDSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSBaseViewController.h; sourceTree = "<group>"; };
+		EC93067C1E619A2A00DF65CF /* YDSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSBaseViewController.m; sourceTree = "<group>"; };
+		EC93067E1E619A4800DF65CF /* YDSAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSAlbumListViewController.h; sourceTree = "<group>"; };
+		EC93067F1E619A4800DF65CF /* YDSAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSAlbumListViewController.m; sourceTree = "<group>"; };
+		EC9306811E619A8100DF65CF /* YDSConcreteMediator+AlbumList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YDSConcreteMediator+AlbumList.h"; sourceTree = "<group>"; };
+		EC9306821E619A8100DF65CF /* YDSConcreteMediator+AlbumList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YDSConcreteMediator+AlbumList.m"; sourceTree = "<group>"; };
+		EC9306841E61BD2800DF65CF /* YDSAlbumListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSAlbumListViewModel.h; sourceTree = "<group>"; };
+		EC9306851E61BD2800DF65CF /* YDSAlbumListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSAlbumListViewModel.m; sourceTree = "<group>"; };
+		EC9306881E61C58E00DF65CF /* YDSCapturerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSCapturerViewController.h; sourceTree = "<group>"; };
+		EC9306891E61C58E00DF65CF /* YDSCapturerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSCapturerViewController.m; sourceTree = "<group>"; };
+		EC93068C1E61C9FD00DF65CF /* YDSMediaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSMediaService.h; sourceTree = "<group>"; };
+		EC93068D1E61C9FD00DF65CF /* YDSMediaService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSMediaService.m; sourceTree = "<group>"; };
+		EC93068F1E61D8A000DF65CF /* UIImage+Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Thumbnail.h"; sourceTree = "<group>"; };
+		EC9306901E61D8A000DF65CF /* UIImage+Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thumbnail.m"; sourceTree = "<group>"; };
+		EC9306911E61D8A000DF65CF /* UImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UImage+FixOrientation.h"; sourceTree = "<group>"; };
+		EC9306921E61D8A000DF65CF /* UImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UImage+FixOrientation.m"; sourceTree = "<group>"; };
+		EC9306951E61EF5D00DF65CF /* YDSCapturerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSCapturerViewModel.h; sourceTree = "<group>"; };
+		EC9306961E61EF5D00DF65CF /* YDSCapturerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSCapturerViewModel.m; sourceTree = "<group>"; };
+		EC9306981E62BB1600DF65CF /* YDSAlbumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSAlbumDetailViewController.h; sourceTree = "<group>"; };
+		EC9306991E62BB1600DF65CF /* YDSAlbumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSAlbumDetailViewController.m; sourceTree = "<group>"; };
+		EC93069B1E62BB4000DF65CF /* YDSAlbumDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSAlbumDetailViewModel.h; sourceTree = "<group>"; };
+		EC93069C1E62BB4000DF65CF /* YDSAlbumDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSAlbumDetailViewModel.m; sourceTree = "<group>"; };
+		EC9306A31E6C479400DF65CF /* YDSConvertVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSConvertVideoViewController.h; sourceTree = "<group>"; };
+		EC9306A41E6C479400DF65CF /* YDSConvertVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSConvertVideoViewController.m; sourceTree = "<group>"; };
+		EC9306A61E6C47D000DF65CF /* YDSConvertVideoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSConvertVideoViewModel.h; sourceTree = "<group>"; };
+		EC9306A71E6C47D000DF65CF /* YDSConvertVideoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSConvertVideoViewModel.m; sourceTree = "<group>"; };
+		EC9306AD1E6C497300DF65CF /* YDSImageConvert2VideoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSImageConvert2VideoService.h; sourceTree = "<group>"; };
+		EC9306AE1E6C497300DF65CF /* YDSImageConvert2VideoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSImageConvert2VideoService.m; sourceTree = "<group>"; };
+		EC9306B01E6C49F300DF65CF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EC9306B21E6C49FE00DF65CF /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		EC9306B41E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YDSConcreteMediator+AlbumDetail.h"; sourceTree = "<group>"; };
+		EC9306B51E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YDSConcreteMediator+AlbumDetail.m"; sourceTree = "<group>"; };
+		FBA5FCB6F2B3C833CB67048A /* Pods-Day2Second.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day2Second.release.xcconfig"; path = "Pods/Target Support Files/Pods-Day2Second/Pods-Day2Second.release.xcconfig"; sourceTree = "<group>"; };
+		FF97956A5E08887409775161 /* Pods-Day2Second.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day2Second.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Day2Second/Pods-Day2Second.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC9306101E60538100DF65CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9306B31E6C49FE00DF65CF /* VideoToolbox.framework in Frameworks */,
+				EC9306B11E6C49F300DF65CF /* AVFoundation.framework in Frameworks */,
+				2922A3393911CE3F9D5FE65A /* Pods_Day2Second.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9306291E60538200DF65CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60A856463ADABF21AAC9EFE /* Pods_Day2SecondTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9306341E60538200DF65CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD651E982F7177B30A21FF5 /* Pods_Day2SecondUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A599CB1B877D4CC60E2CD804 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306B21E6C49FE00DF65CF /* VideoToolbox.framework */,
+				EC9306B01E6C49F300DF65CF /* AVFoundation.framework */,
+				EC93066E1E607D2700DF65CF /* libstdc++.6.0.9.tbd */,
+				EC93066C1E607D2200DF65CF /* libstdc++.tbd */,
+				EC93066A1E607D1A00DF65CF /* libz.tbd */,
+				EC9306681E607CFC00DF65CF /* libc++.tbd */,
+				EC9306661E607CF000DF65CF /* libsqlite3.0.tbd */,
+				3A27E4F8D9B7ED569AB89BDB /* Pods_Day2Second.framework */,
+				1EABF18845549850A9C0CF76 /* Pods_Day2SecondTests.framework */,
+				3BF42DCB291D6007F1AD99CE /* Pods_Day2SecondUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC515547E228364730EB75B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF97956A5E08887409775161 /* Pods-Day2Second.debug.xcconfig */,
+				FBA5FCB6F2B3C833CB67048A /* Pods-Day2Second.release.xcconfig */,
+				277E1EE991DF2C03ECB9F573 /* Pods-Day2SecondTests.debug.xcconfig */,
+				E31F54088906F31BDF013AFA /* Pods-Day2SecondTests.release.xcconfig */,
+				CDC7ABE4A3D220284C7812E7 /* Pods-Day2SecondUITests.debug.xcconfig */,
+				7FEF11C487162BD189BBC7BC /* Pods-Day2SecondUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC93060A1E60538100DF65CF = {
+			isa = PBXGroup;
+			children = (
+				EC9306151E60538100DF65CF /* Day2Second */,
+				EC93062F1E60538200DF65CF /* Day2SecondTests */,
+				EC93063A1E60538200DF65CF /* Day2SecondUITests */,
+				EC9306141E60538100DF65CF /* Products */,
+				AC515547E228364730EB75B7 /* Pods */,
+				A599CB1B877D4CC60E2CD804 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC9306141E60538100DF65CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306131E60538100DF65CF /* Day2Second.app */,
+				EC93062C1E60538200DF65CF /* Day2SecondTests.xctest */,
+				EC9306371E60538200DF65CF /* Day2SecondUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC9306151E60538100DF65CF /* Day2Second */ = {
+			isa = PBXGroup;
+			children = (
+				EC93064C1E605AD100DF65CF /* Mediator */,
+				EC9306531E605B4000DF65CF /* Views */,
+				EC93064E1E605AE700DF65CF /* Models */,
+				EC93064D1E605ADC00DF65CF /* ViewModels */,
+				EC93068B1E61C9DF00DF65CF /* Services */,
+				EC9306501E605AFF00DF65CF /* Extensions */,
+				EC93064F1E605AF900DF65CF /* Utils */,
+				EC9306511E605B0A00DF65CF /* 3rd */,
+				EC9306521E605B1900DF65CF /* Frameworks */,
+				EC9306191E60538100DF65CF /* AppDelegate.h */,
+				EC93061A1E60538100DF65CF /* AppDelegate.m */,
+				EC9306741E61480E00DF65CF /* Launch Screen.storyboard */,
+				EC9306221E60538100DF65CF /* Assets.xcassets */,
+				EC9306271E60538100DF65CF /* Info.plist */,
+				EC9306161E60538100DF65CF /* Supporting Files */,
+			);
+			path = Day2Second;
+			sourceTree = "<group>";
+		};
+		EC9306161E60538100DF65CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306171E60538100DF65CF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC93062F1E60538200DF65CF /* Day2SecondTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306301E60538200DF65CF /* Day2SecondTests.m */,
+				EC9306321E60538200DF65CF /* Info.plist */,
+			);
+			path = Day2SecondTests;
+			sourceTree = "<group>";
+		};
+		EC93063A1E60538200DF65CF /* Day2SecondUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC93063B1E60538200DF65CF /* Day2SecondUITests.m */,
+				EC93063D1E60538200DF65CF /* Info.plist */,
+			);
+			path = Day2SecondUITests;
+			sourceTree = "<group>";
+		};
+		EC93064C1E605AD100DF65CF /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306701E6143E300DF65CF /* YDSMediator.h */,
+				EC9306711E61441B00DF65CF /* YDSConcreteMediator.h */,
+				EC9306721E61441B00DF65CF /* YDSConcreteMediator.m */,
+				EC9306811E619A8100DF65CF /* YDSConcreteMediator+AlbumList.h */,
+				EC9306821E619A8100DF65CF /* YDSConcreteMediator+AlbumList.m */,
+				EC9306B41E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.h */,
+				EC9306B51E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.m */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
+		EC93064D1E605ADC00DF65CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306841E61BD2800DF65CF /* YDSAlbumListViewModel.h */,
+				EC9306851E61BD2800DF65CF /* YDSAlbumListViewModel.m */,
+				EC93069B1E62BB4000DF65CF /* YDSAlbumDetailViewModel.h */,
+				EC93069C1E62BB4000DF65CF /* YDSAlbumDetailViewModel.m */,
+				EC9306951E61EF5D00DF65CF /* YDSCapturerViewModel.h */,
+				EC9306961E61EF5D00DF65CF /* YDSCapturerViewModel.m */,
+				EC9306A61E6C47D000DF65CF /* YDSConvertVideoViewModel.h */,
+				EC9306A71E6C47D000DF65CF /* YDSConvertVideoViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EC93064E1E605AE700DF65CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306541E605B9F00DF65CF /* YDSDAO.h */,
+				EC9306551E605B9F00DF65CF /* YDSDAO.m */,
+				EC9306571E6072EF00DF65CF /* YDSBaseModel.h */,
+				EC9306581E6072EF00DF65CF /* YDSBaseModel.m */,
+				EC93065A1E60739800DF65CF /* YDSImageGroupModel.h */,
+				EC93065B1E60739800DF65CF /* YDSImageGroupModel.m */,
+				EC93065D1E6073C100DF65CF /* YDSImageModel.h */,
+				EC93065E1E6073C100DF65CF /* YDSImageModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC93064F1E605AF900DF65CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306631E6079F600DF65CF /* YDSFacadeCrashReportUtil.h */,
+				EC9306641E6079F600DF65CF /* YDSFacadeCrashReportUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC9306501E605AFF00DF65CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC93068F1E61D8A000DF65CF /* UIImage+Thumbnail.h */,
+				EC9306901E61D8A000DF65CF /* UIImage+Thumbnail.m */,
+				EC9306911E61D8A000DF65CF /* UImage+FixOrientation.h */,
+				EC9306921E61D8A000DF65CF /* UImage+FixOrientation.m */,
+				EC9306601E6078E200DF65CF /* NSObject+Swizzle.h */,
+				EC9306611E6078E200DF65CF /* NSObject+Swizzle.m */,
+				EC9306761E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.h */,
+				EC9306771E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EC9306511E605B0A00DF65CF /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		EC9306521E605B1900DF65CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC9306531E605B4000DF65CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC93067A1E619A1C00DF65CF /* Base */,
+				EC9306791E6199EC00DF65CF /* AlbumList */,
+				EC9306871E61C56400DF65CF /* Capturer */,
+				EC9306A21E6C476900DF65CF /* ConvertVideo */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC9306791E6199EC00DF65CF /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				EC93067E1E619A4800DF65CF /* YDSAlbumListViewController.h */,
+				EC93067F1E619A4800DF65CF /* YDSAlbumListViewController.m */,
+				EC9306981E62BB1600DF65CF /* YDSAlbumDetailViewController.h */,
+				EC9306991E62BB1600DF65CF /* YDSAlbumDetailViewController.m */,
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		EC93067A1E619A1C00DF65CF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC93067B1E619A2A00DF65CF /* YDSBaseViewController.h */,
+				EC93067C1E619A2A00DF65CF /* YDSBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC9306871E61C56400DF65CF /* Capturer */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306881E61C58E00DF65CF /* YDSCapturerViewController.h */,
+				EC9306891E61C58E00DF65CF /* YDSCapturerViewController.m */,
+			);
+			path = Capturer;
+			sourceTree = "<group>";
+		};
+		EC93068B1E61C9DF00DF65CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC93068C1E61C9FD00DF65CF /* YDSMediaService.h */,
+				EC93068D1E61C9FD00DF65CF /* YDSMediaService.m */,
+				EC9306AD1E6C497300DF65CF /* YDSImageConvert2VideoService.h */,
+				EC9306AE1E6C497300DF65CF /* YDSImageConvert2VideoService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EC9306A21E6C476900DF65CF /* ConvertVideo */ = {
+			isa = PBXGroup;
+			children = (
+				EC9306A31E6C479400DF65CF /* YDSConvertVideoViewController.h */,
+				EC9306A41E6C479400DF65CF /* YDSConvertVideoViewController.m */,
+			);
+			path = ConvertVideo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC9306121E60538100DF65CF /* Day2Second */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9306401E60538200DF65CF /* Build configuration list for PBXNativeTarget "Day2Second" */;
+			buildPhases = (
+				EC294EB175DCA558573BFEC3 /* [CP] Check Pods Manifest.lock */,
+				EC93060F1E60538100DF65CF /* Sources */,
+				EC9306101E60538100DF65CF /* Frameworks */,
+				EC9306111E60538100DF65CF /* Resources */,
+				8B57147AA0B3BE9F9FC9F54F /* [CP] Embed Pods Frameworks */,
+				1F6AFFBE068658624B919A1E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Day2Second;
+			productName = Day2Second;
+			productReference = EC9306131E60538100DF65CF /* Day2Second.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC93062B1E60538200DF65CF /* Day2SecondTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9306431E60538200DF65CF /* Build configuration list for PBXNativeTarget "Day2SecondTests" */;
+			buildPhases = (
+				22F841BA020E93BD29FD5833 /* [CP] Check Pods Manifest.lock */,
+				EC9306281E60538200DF65CF /* Sources */,
+				EC9306291E60538200DF65CF /* Frameworks */,
+				EC93062A1E60538200DF65CF /* Resources */,
+				F62ED630EE4E2BD9B639A090 /* [CP] Embed Pods Frameworks */,
+				5D2C4923E08426FCF31A1B8E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC93062E1E60538200DF65CF /* PBXTargetDependency */,
+			);
+			name = Day2SecondTests;
+			productName = Day2SecondTests;
+			productReference = EC93062C1E60538200DF65CF /* Day2SecondTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC9306361E60538200DF65CF /* Day2SecondUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9306461E60538200DF65CF /* Build configuration list for PBXNativeTarget "Day2SecondUITests" */;
+			buildPhases = (
+				E926D8516A5598A9C2F0FAEB /* [CP] Check Pods Manifest.lock */,
+				EC9306331E60538200DF65CF /* Sources */,
+				EC9306341E60538200DF65CF /* Frameworks */,
+				EC9306351E60538200DF65CF /* Resources */,
+				F46BDE1A7D85D9DA27821922 /* [CP] Embed Pods Frameworks */,
+				5375185F417A5DDA9743E705 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC9306391E60538200DF65CF /* PBXTargetDependency */,
+			);
+			name = Day2SecondUITests;
+			productName = Day2SecondUITests;
+			productReference = EC9306371E60538200DF65CF /* Day2SecondUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC93060B1E60538100DF65CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "袁峥";
+				TargetAttributes = {
+					EC9306121E60538100DF65CF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JYRT8AXTRS;
+						ProvisioningStyle = Automatic;
+					};
+					EC93062B1E60538200DF65CF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JYRT8AXTRS;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC9306121E60538100DF65CF;
+					};
+					EC9306361E60538200DF65CF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JYRT8AXTRS;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC9306121E60538100DF65CF;
+					};
+				};
+			};
+			buildConfigurationList = EC93060E1E60538100DF65CF /* Build configuration list for PBXProject "Day2Second" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC93060A1E60538100DF65CF;
+			productRefGroup = EC9306141E60538100DF65CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC9306121E60538100DF65CF /* Day2Second */,
+				EC93062B1E60538200DF65CF /* Day2SecondTests */,
+				EC9306361E60538200DF65CF /* Day2SecondUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC9306111E60538100DF65CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9306751E61480E00DF65CF /* Launch Screen.storyboard in Resources */,
+				EC9306231E60538100DF65CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC93062A1E60538200DF65CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9306351E60538200DF65CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F6AFFBE068658624B919A1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Day2Second/Pods-Day2Second-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22F841BA020E93BD29FD5833 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5375185F417A5DDA9743E705 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Day2SecondUITests/Pods-Day2SecondUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D2C4923E08426FCF31A1B8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Day2SecondTests/Pods-Day2SecondTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B57147AA0B3BE9F9FC9F54F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Day2Second/Pods-Day2Second-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E926D8516A5598A9C2F0FAEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC294EB175DCA558573BFEC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F46BDE1A7D85D9DA27821922 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Day2SecondUITests/Pods-Day2SecondUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F62ED630EE4E2BD9B639A090 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Day2SecondTests/Pods-Day2SecondTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC93060F1E60538100DF65CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9306731E61441B00DF65CF /* YDSConcreteMediator.m in Sources */,
+				EC93068A1E61C58E00DF65CF /* YDSCapturerViewController.m in Sources */,
+				EC93067D1E619A2A00DF65CF /* YDSBaseViewController.m in Sources */,
+				EC9306621E6078E200DF65CF /* NSObject+Swizzle.m in Sources */,
+				EC9306A81E6C47D000DF65CF /* YDSConvertVideoViewModel.m in Sources */,
+				EC93069A1E62BB1600DF65CF /* YDSAlbumDetailViewController.m in Sources */,
+				EC93069D1E62BB4000DF65CF /* YDSAlbumDetailViewModel.m in Sources */,
+				EC9306971E61EF5D00DF65CF /* YDSCapturerViewModel.m in Sources */,
+				EC93065F1E6073C100DF65CF /* YDSImageModel.m in Sources */,
+				EC93065C1E60739800DF65CF /* YDSImageGroupModel.m in Sources */,
+				EC93061B1E60538100DF65CF /* AppDelegate.m in Sources */,
+				EC9306B61E6C537C00DF65CF /* YDSConcreteMediator+AlbumDetail.m in Sources */,
+				EC9306181E60538100DF65CF /* main.m in Sources */,
+				EC9306941E61D8A000DF65CF /* UImage+FixOrientation.m in Sources */,
+				EC9306931E61D8A000DF65CF /* UIImage+Thumbnail.m in Sources */,
+				EC9306801E619A4800DF65CF /* YDSAlbumListViewController.m in Sources */,
+				EC9306AF1E6C497300DF65CF /* YDSImageConvert2VideoService.m in Sources */,
+				EC9306651E6079F600DF65CF /* YDSFacadeCrashReportUtil.m in Sources */,
+				EC9306A51E6C479400DF65CF /* YDSConvertVideoViewController.m in Sources */,
+				EC9306861E61BD2800DF65CF /* YDSAlbumListViewModel.m in Sources */,
+				EC9306591E6072EF00DF65CF /* YDSBaseModel.m in Sources */,
+				EC9306831E619A8200DF65CF /* YDSConcreteMediator+AlbumList.m in Sources */,
+				EC93068E1E61C9FD00DF65CF /* YDSMediaService.m in Sources */,
+				EC9306781E614C6200DF65CF /* UIViewController+MediatorWeakRefRegister.m in Sources */,
+				EC9306561E605B9F00DF65CF /* YDSDAO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9306281E60538200DF65CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9306311E60538200DF65CF /* Day2SecondTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9306331E60538200DF65CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC93063C1E60538200DF65CF /* Day2SecondUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC93062E1E60538200DF65CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC9306121E60538100DF65CF /* Day2Second */;
+			targetProxy = EC93062D1E60538200DF65CF /* PBXContainerItemProxy */;
+		};
+		EC9306391E60538200DF65CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC9306121E60538100DF65CF /* Day2Second */;
+			targetProxy = EC9306381E60538200DF65CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC93063E1E60538200DF65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC93063F1E60538200DF65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC9306411E60538200DF65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF97956A5E08887409775161 /* Pods-Day2Second.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JYRT8AXTRS;
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = Day2Second/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuen.Day2Second;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC9306421E60538200DF65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA5FCB6F2B3C833CB67048A /* Pods-Day2Second.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JYRT8AXTRS;
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"NSLog(...)=\"\"",
+				);
+				INFOPLIST_FILE = Day2Second/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuen.Day2Second;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EC9306441E60538200DF65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 277E1EE991DF2C03ECB9F573 /* Pods-Day2SecondTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JYRT8AXTRS;
+				INFOPLIST_FILE = Day2SecondTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuen.Day2SecondTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Day2Second.app/Day2Second";
+			};
+			name = Debug;
+		};
+		EC9306451E60538200DF65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E31F54088906F31BDF013AFA /* Pods-Day2SecondTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JYRT8AXTRS;
+				INFOPLIST_FILE = Day2SecondTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuen.Day2SecondTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Day2Second.app/Day2Second";
+			};
+			name = Release;
+		};
+		EC9306471E60538200DF65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDC7ABE4A3D220284C7812E7 /* Pods-Day2SecondUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = JYRT8AXTRS;
+				INFOPLIST_FILE = Day2SecondUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuen.Day2SecondUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Day2Second;
+			};
+			name = Debug;
+		};
+		EC9306481E60538200DF65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FEF11C487162BD189BBC7BC /* Pods-Day2SecondUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = JYRT8AXTRS;
+				INFOPLIST_FILE = Day2SecondUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuen.Day2SecondUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Day2Second;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC93060E1E60538100DF65CF /* Build configuration list for PBXProject "Day2Second" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC93063E1E60538200DF65CF /* Debug */,
+				EC93063F1E60538200DF65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9306401E60538200DF65CF /* Build configuration list for PBXNativeTarget "Day2Second" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9306411E60538200DF65CF /* Debug */,
+				EC9306421E60538200DF65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9306431E60538200DF65CF /* Build configuration list for PBXNativeTarget "Day2SecondTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9306441E60538200DF65CF /* Debug */,
+				EC9306451E60538200DF65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9306461E60538200DF65CF /* Build configuration list for PBXNativeTarget "Day2SecondUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9306471E60538200DF65CF /* Debug */,
+				EC9306481E60538200DF65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC93060B1E60538100DF65CF /* Project object */;
+}
