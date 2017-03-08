@@ -8,6 +8,7 @@
 
 #import "YDSBaseModel.h"
 #import "YDSDAO.h"
+#import "YDSImageGroupModel.h"
 
 @implementation YDSBaseModel
 - (instancetype)init

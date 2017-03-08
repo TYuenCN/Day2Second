@@ -132,6 +132,6 @@
 
 - (void)naviBarBtnItem
 {
-    [[YDSConcreteMediator sharedInstance] presentConvertVideoViewWithGroupID:self.albumDetailViewModel.curSelectedGroupID imagesRelativePath:self.albumDetailViewModel.groupImages];
+    [[YDSConcreteMediator sharedInstance] presentConvertVideoViewWithGroupID:self.albumDetailViewModel.curSelectedGroupID imageModels:self.albumDetailViewModel.groupImages];
 }
 @end

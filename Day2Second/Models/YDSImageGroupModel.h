@@ -15,4 +15,5 @@
 @property (nonatomic, assign) NSInteger db_group_notice_interval;
 @property (nullable, nonatomic, strong) NSString *db_group_name;
 @property (nullable, nonatomic, strong) NSString *db_group_cover;
+@property (nullable, nonatomic, strong) NSString *db_group_latest_video;
 @end

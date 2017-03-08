@@ -10,6 +10,7 @@
 #import <VideoToolbox/VideoToolbox.h>
 #import <UIKit/UIKit.h>
 #import "YDSImageConvert2VideoService.h"
+#import "UImage+FixOrientation.h"
 
 @interface YDSImageConvert2VideoService ()
 {
@@ -22,9 +23,11 @@
 @property(nonatomic, strong)NSString  *theVideoPath;
 @property(nonatomic, strong)AVAssetWriter *videoWriter;
 @property(nonatomic, strong)AVAssetWriterInput *writerInput;
+@property(nonatomic, strong)dispatch_queue_t mediaManipulatorQueue;
 
-@property (nonatomic, assign)YDSImageConvert2VideoProgressBlock progressBlock;
-@property (nonatomic, assign)YDSImageConvert2VideoCompletionBlock completionBlock;
+@property (nonatomic, strong)YDSImageConvert2VideoProgressBlock progressBlock;
+@property (nonatomic, strong)YDSImageConvert2VideoCompletionBlock completionBlock;
+@property(nonatomic, strong)dispatch_queue_t callbackQueue;
 @end
 
 @implementation YDSImageConvert2VideoService
@@ -52,9 +55,10 @@
     self.theVideoPath = storedVideoAbsolutePath;
     self.progressBlock = progressBlock;
     self.completionBlock = completionBlock;
+    self.callbackQueue = onQueue;
     
     //定义视频的大小
-    CGSize __size = [UIScreen mainScreen].bounds.size;
+    CGSize __size = CGSizeMake(320, 400);
     
     NSError *__error =nil;
     //—-initialize compression engine
@@ -78,7 +82,7 @@
     [self.videoWriter startSessionAtSourceTime:kCMTimeZero];
     
     //合成多张图片为一个视频文件
-    dispatch_queue_t __dispatchQueue =dispatch_queue_create("mediaInputQueue",NULL);
+    self.mediaManipulatorQueue = dispatch_queue_create("mediaInputQueue",NULL);
     OSStatus status = VTCompressionSessionCreate(NULL, __size.width, __size.height, kCMVideoCodecType_H264, NULL, NULL, NULL, didCompressH264,(__bridge void *)(self),  &EncodingSession);
     if (status != 0)
     {
@@ -100,14 +104,14 @@
     CFRelease(frameIntervalRef);
     // Tell the encoder to start encoding
     VTCompressionSessionPrepareToEncodeFrames(EncodingSession);
-    [self.writerInput requestMediaDataWhenReadyOnQueue:__dispatchQueue usingBlock:^{
+    [self.writerInput requestMediaDataWhenReadyOnQueue:self.mediaManipulatorQueue usingBlock:^{
         if ([self.writerInput isReadyForMoreMediaData]) {
             [self compressFrame];
-            
-            // Start Monitored
-            [self startMonitoredIfConvertFinished];
         }
     }];
+    
+    // Start Monitored
+    [self startMonitoredIfConvertFinished];
 }
 
 
@@ -118,24 +122,29 @@
 - (void)compressFrame
 {
     if (++self.curFrameIndex < [self.imageArr count]*2) {
-        NSLog(@"Convert Frame:%ld", (long)self.curFrameIndex);
-        long __imageIndex = self.curFrameIndex / 2;
-        UIImage *img = [self.imageArr objectAtIndex:__imageIndex];
-        CVImageBufferRef imageBuffer = (CVImageBufferRef)[self pixelBufferFromCGImage:img.CGImage size:CGSizeMake(320,400)];
-        // CMTimeMake() 当前第几帧，每秒多少帧
-        CMTime presentationTimeStamp = CMTimeMake(self.curFrameIndex, 25);
-        VTEncodeInfoFlags flags;
-        OSStatus statusCode = VTCompressionSessionEncodeFrame(EncodingSession, imageBuffer, presentationTimeStamp, kCMTimeInvalid, NULL, NULL, &flags);
-        if (statusCode != noErr)
-        {
-            if (EncodingSession!=nil||EncodingSession!=NULL)
+        @autoreleasepool {
+            CGSize __size = CGSizeMake(320, 400);
+            NSLog(@"Convert Frame:%ld", (long)self.curFrameIndex);
+            long __imageIndex = self.curFrameIndex / 2;
+            NSString *__imgPath = [self.imageArr objectAtIndex:__imageIndex];
+            NSString *__docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) lastObject];
+            UIImage *img = [UIImage imageWithContentsOfFile:[__docPath stringByAppendingPathComponent:__imgPath]];
+            img = [UIImage fixOrientation:img];
+            CVImageBufferRef imageBuffer = (CVImageBufferRef)[self pixelBufferFromCGImage:img.CGImage size:__size];
+            // CMTimeMake() 当前第几帧，每秒多少帧
+            CMTime presentationTimeStamp = CMTimeMake(self.curFrameIndex, 25);
+            VTEncodeInfoFlags flags;
+            OSStatus statusCode = VTCompressionSessionEncodeFrame(EncodingSession, imageBuffer, presentationTimeStamp, kCMTimeInvalid, NULL, NULL, &flags);
+            if (statusCode != noErr)
             {
-                VTCompressionSessionInvalidate(EncodingSession);
-                CFRelease(EncodingSession);
-                return;
+                if (EncodingSession!=nil||EncodingSession!=NULL)
+                {
+                    VTCompressionSessionInvalidate(EncodingSession);
+                    CFRelease(EncodingSession);
+                    return;
+                }
             }
         }
-        
     }
 }
 
@@ -174,7 +183,7 @@ void didCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStat
     CGContextRef context =CGBitmapContextCreate(pxdata,size.width,size.height,8,4*size.width,rgbColorSpace,kCGImageAlphaPremultipliedFirst);
     
     NSParameterAssert(context);
-    CGContextDrawImage(context,CGRectMake(0,0,320,400), image);
+    CGContextDrawImage(context,CGRectMake(0,0,size.width,size.height), image);
     
     CGColorSpaceRelease(rgbColorSpace);
     
@@ -190,16 +199,24 @@ void didCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStat
 {
     self.timer4Monitored = [NSTimer scheduledTimerWithTimeInterval:3 repeats:true block:^(NSTimer * _Nonnull timer) {
         NSTimeInterval __timestamp = [[NSDate new] timeIntervalSince1970];
-        if (__timestamp - self.preEncodeFrameTimestamp > 1000 * 6) {
+        if (__timestamp - self.preEncodeFrameTimestamp > 6) {
             
             // Finish Convert
-            [self.writerInput markAsFinished];
-            [self.videoWriter finishWriting];
-            
-            // Callback Invoker
-            if (self.completionBlock) {
-                self.completionBlock();
-            }
+            dispatch_async(self.mediaManipulatorQueue, ^{
+                [self.writerInput markAsFinished];
+                [self.videoWriter finishWriting];
+                
+                // Callback Invoker
+                if (self.completionBlock) {
+                    if (self.callbackQueue) {
+                        dispatch_async(self.callbackQueue, ^{
+                            self.completionBlock();
+                        });
+                    }else{
+                        self.completionBlock();
+                    }
+                }
+            });
             
             // Invalid Timer
             if (self.timer4Monitored) {

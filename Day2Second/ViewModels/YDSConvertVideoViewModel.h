@@ -10,8 +10,10 @@
 
 @interface YDSConvertVideoViewModel : NSObject
 @property (nullable, nonatomic, strong) NSNumber *curSelectedGroupID;
-@property (nullable, nonatomic, strong) NSArray *imagesRelativePath;
+@property (nullable, nonatomic, strong) NSArray *imageModels;
 
 - (NSString *_Nonnull)genStoredVideoAbsolutePath;
+- (NSArray *_Nonnull)genImageRelativePathList;
 - (void)save;
+- (NSString *_Nullable)queryExistGroupVideoPath;
 @end

@@ -13,6 +13,7 @@ target 'Day2Second' do
     pod 'JSPatch'
     # 选2.5版，3.0和4.0都忙着用Swift重构去了，搞出了很多新东西，不利于新手入门
     pod 'ReactiveCocoa', '2.5'
+    pod 'JGProgressHUD'
 
   target 'Day2SecondTests' do
     inherit! :search_paths

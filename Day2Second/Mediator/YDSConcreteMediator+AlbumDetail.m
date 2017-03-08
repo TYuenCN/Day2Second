@@ -12,7 +12,7 @@
 
 @implementation YDSConcreteMediator (AlbumDetail)
 - (void)presentConvertVideoViewWithGroupID:(NSNumber *_Nonnull)groupID
-                        imagesRelativePath:(NSArray *_Nonnull)imagesRelativePath
+                        imageModels:(NSArray *_Nonnull)imageModels
 {
     UITabBarController *__rootTabBarController = (UITabBarController *)[self queryVCWithClass:[UITabBarController class]];
     if (__rootTabBarController) {
@@ -25,7 +25,7 @@
             // Present
             YDSConvertVideoViewModel *__convertVideoVM = [YDSConvertVideoViewModel new];
             __convertVideoVM.curSelectedGroupID = groupID;
-            __convertVideoVM.imagesRelativePath = imagesRelativePath;
+            __convertVideoVM.imageModels = imageModels;
             YDSConvertVideoViewController *__convertVideoVC = [YDSConvertVideoViewController new];
             __convertVideoVC.convertVideoViewModel = __convertVideoVM;
             __convertVideoVC.title = @"生成视频";

@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - JGProgressHUD (1.4)
   - JSPatch (1.1.2):
     - JSPatch/Core (= 1.1.2)
   - JSPatch/Core (1.1.2)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Bugly
   - FMDB (~> 2.6.2)
+  - JGProgressHUD
   - JSPatch
   - ReactiveCocoa (= 2.5)
   - SDWebImage (~> 3.8)
@@ -44,10 +46,11 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Bugly: 7756e72c59387b0d490f46e83ab458ae94ee7fba
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
   JSPatch: 741205ebb2e2238c223a436e4c8cf75cf40a345f
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: d1e4e31fe41dfc98ec64e1e80311510d330dcebe
+PODFILE CHECKSUM: c5c7befbeae6846121f6b7363bc253819dd02f84
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0

@@ -10,5 +10,5 @@
 
 @interface YDSConcreteMediator (AlbumDetail)
 - (void)presentConvertVideoViewWithGroupID:(NSNumber *_Nonnull)groupID
-                        imagesRelativePath:(NSArray *_Nonnull)imagesRelativePath;
+                        imageModels:(NSArray *_Nonnull)imageModels;
 @end
